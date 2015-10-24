@@ -1,0 +1,36 @@
+<!-- PRODUCTS INDEX -->
+<%= stylesheet_link_tag 'products_index' %>
+<div class="container">
+    <div class="row">
+      <div class="span3">
+       
+        </div>
+            <br />
+            
+        </div>
+      </div>
+      <div class="span9">
+        <div class="hero-unit">
+          <h1 class="">Special Offer</h1>
+          <p class="">All the stuff you want! Don't miss out!</p>
+        </div>  
+        <% @products.each do |product| %>
+                <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/800x500" alt="">
+                    <div class="caption">
+
+                        <h3><%= product.title %></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <%= button_to "see product detail", product_detail_path(product.id), method: :get, class: "btn btn-default text-center" %>
+                           <%= button_to "add to cart", orders_index_path, method: :get, class: "btn btn-default text-center" %>
+                        </p>
+                    </div>
+                </div>
+                   
+            </div>
+            <% end %> 
+      </div>
+    </div>
+  </div>

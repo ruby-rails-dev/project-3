@@ -23,4 +23,12 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
 
   delete "/sessions", to: "sessions#destroy", as: "logout"
+
+  #Products routes
+  get "/products/:id", to: "products#show", as: "product_detail"
+
+  get "/products", to: "products#index", as: "products_index"
+
+  #Orders routs
+  get "/orders", to: "orders#index", as: "orders_index"
 end

@@ -1,13 +1,46 @@
- <div class="container">
- <div class="row">
-        <div class="col-md-8">
-          .col-md-8
-          <div class="row">
-            <div class="col-md-6">.col-md-6</div>
-            <h1>stuff</h1>
-            <div class="col-md-6">.col-md-6</div>
-          </div>
+<!-- USERS INDEX /HOMEPAGE -->
+<div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron hero-spacer">
+      <h1>Super store</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.
+      </p>
+      <p><%= button_to "See all products", products_index_path, method: :get, class: "btn btn-default text-center" %>
+      </p>
+    </header>
+    <hr>
+
+    <!-- Title -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Featured Products</h3>
         </div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
-    </div>  
+    </div>
+    <!-- /.row -->
+
+    <!-- Page Features -->
+
+    <div class="row text-center">
+      <% (0..3).each do |i| %>
+        <% product = @products[i] %>
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="http://placehold.it/800x500" alt="">
+                <div class="caption">
+                  <h3>stuff</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p>
+                    <%= button_to "see product detail", product_detail_path(product.id), method: :get, class: "btn btn-default text-center" %>
+                    <%= button_to "add to cart", orders_index_path, method: :get, class: "btn btn-default text-center" %>
+                    </p>
+                </div>
+            </div>
+        </div>
+      <% end %>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+</div>
+

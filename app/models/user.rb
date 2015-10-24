@@ -5,7 +5,10 @@ class User < ActiveRecord::Base
 
   has_many :orders
   
-
+  def index
+    @users = User.all
+    @products = Product.all
+  end
   
 
   def self.confirm(params)
