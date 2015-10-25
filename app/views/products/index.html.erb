@@ -13,7 +13,10 @@
         <div class="hero-unit">
           <h1 class="">Special Offer</h1>
           <p class="">All the stuff you want! Don't miss out!</p>
-        </div>  
+        </div>
+        <div> 
+        <%= paginate @products %> 
+        </div>
         <% @products.each do |product| %>
                 <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">

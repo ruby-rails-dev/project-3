@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 #ffaker gem to seed
 gem 'ffaker'
 
+gem 'kaminari'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
