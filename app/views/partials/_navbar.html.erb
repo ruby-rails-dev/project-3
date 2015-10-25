@@ -1,15 +1,14 @@
+<%= stylesheet_link_tag "_navbar" %>
 <nav class="navbar navbar-default navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <%= link_to "Project3", "/", :"data-no-turbolink" => true, class: "navbar-brand" %>  
-
     </div>
     <!-- @user.present? -->
     <% if current_user %>
 
       <%= button_to "Logout", logout_path, method: "delete", class: "red btn btn-default navbar-right navbar-btn" %>
-    
 
     <% else %>
       <%= button_to "Login", sign_in_path, method: "get", class: "btn btn-default navbar-right navbar-btn" %>

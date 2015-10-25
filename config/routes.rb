@@ -12,8 +12,6 @@ Rails.application.routes.draw do
 
   get "/users/:id/edit", to: "users#edit", as: "edit_user"
 
-  get 'users/posts/:id', to: 'users#posts', as: "user_posts"
-
   # The update route
   patch "/users/:id", to: "users#update" 
 
