@@ -1,9 +1,6 @@
 require 'ffaker'
 
 
-# Product.create(image: File.new("public/images/image1.jpg")
-#     )
-
 10.times do
   User.create(
     first_name: Faker::Name.first_name, 
@@ -16,7 +13,8 @@ require 'ffaker'
   Product.create(
     description: Faker::Product.product_name,
     title: Faker::Product.product,
-    image: File.new("public/images/image1.jpg")
+    image: File.new("public/images/image1.jpg"),
+    price: rand(1..100)
   )
 end
 
