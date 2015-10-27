@@ -1,15 +1,23 @@
-
 <h1>Your Cart</h1>
 <ul>
+  <% @products.each do |product| %>
    <li class="span3">
       <div class="thumbnail">
-        <img src="holder.js/300x200" alt="">
+        
         <div class="caption">
-          <h4>product</h4>
-          <p>title</p>
-          <p>Price</p>
-          <p>Quantity</p>
-          <a class="btn btn-primary" href="#">View</a>
+        
+          <p>Product Title<%= product.title %></p>
+          <p>Price<%= product.price %></p>
+          <p>Quantity <%= product.quantity %></p>
+
+<br/>
+</div>
+</div>
+</li>
+<% end %>
+
+<%= link_to "Back to main page", root_path %>
+          
           <a class="btn btn-success" href="#">Remove from cart</a>
         </div>
       </div>

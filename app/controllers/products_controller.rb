@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.order(:title).page(params[:page]).all
+   
   end
 
   def new
@@ -20,9 +21,21 @@ class ProductsController < ApplicationController
   
   end
 
+  def add_to_cart
+    user = current_user
+    product = Product.find(params[:id])
+    user.products.push(product)
+    user.save
+    binding.pry
+    redirect_to orders_path
+  end
+
+
   def show
    @product = Product.find(params[:id])
   end
+
+
 
   private 
 

@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     p "CREATING A USER #{user_params}"
     @user = User.create(user_params)
     login(@user) # <-- login the user
-    redirect_to "/users/#{@user.id}" 
+    redirect_to "/users" 
    end
 
     def show
@@ -37,6 +37,6 @@ class UsersController < ApplicationController
       # update the user
       user.update_attributes(updated_attributes)
       #redirect to show
-      redirect_to "/users/#{user.id}"  # <-- go to show
+      redirect_to "/users"  # <-- go to show
     end
 end

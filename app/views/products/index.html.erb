@@ -27,7 +27,17 @@
                         <p><%= product.description %></p>
                         <p>
                             <%= button_to "see product detail", product_path(product), method: :get, class: "btn btn-default text-center" %>
-                           <%= button_to "add to cart", orders_index_path, method: :get, class: "btn btn-default text-center" %>
+
+
+                             <%= button_to [:add_to_cart, product] do %>
+                             add to cart
+                             <% end %>
+
+              
+
+
+                            </div>
+                          
                         </p>
                     </div>
                 </div>

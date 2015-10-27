@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products_orders/create'
+
   root to:"users#index"
 
   #USERS ROUTES
@@ -20,12 +22,19 @@ Rails.application.routes.draw do
 
   post "/sessions", to: "sessions#create"
 
+
+
+
   delete "/sessions", to: "sessions#destroy", as: "logout"
 
   #Products routes
   resources :products do
+    member do
+      post 'add_to_cart'
+    end
     resources :orders
   end
+  resources :orders_products
 
   # get "/products/:id", to: "products#show", as: "product_detail"
 
@@ -35,4 +44,5 @@ Rails.application.routes.draw do
 
   #Orders routs
   get "/orders", to: "orders#index", as: "orders_index"
+  post "/orders", to: "orders#index"
 end
