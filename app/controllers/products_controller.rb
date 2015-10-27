@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
     product = Product.find(params[:id])
     user.products.push(product)
     user.save
-    binding.pry
+  
     redirect_to orders_path
   end
 

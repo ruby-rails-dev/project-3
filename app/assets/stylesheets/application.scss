@@ -16,15 +16,49 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #E5E5E5; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 
 .hero-spacer {
-    margin-top: 50px;
+    margin-top: 0px;
 }
 
 .hero-feature {
     margin-bottom: 30px;
 }
 
+.jumbotron {
+  background-color: #C1EAC1;
+}
+
+.ghost-button {
+  color: #009688;
+  background: white;
+  opacity: 0.5;
+  border: 1px solid #009688;
+  font-size: 17px;
+  padding: 7px 12px;
+  font-weight: normal;
+  margin: 6px 0;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 120px;
+}
+
+.ghost-button:hover { 
+    background-color: white;
+    opacity:0.5;
+}
 
 
 

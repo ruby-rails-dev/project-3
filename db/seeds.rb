@@ -13,7 +13,7 @@ require 'ffaker'
   Product.create(
     description: Faker::Product.product_name,
     title: Faker::Product.product,
-    image: File.new("public/images/image1.jpg"),
+    image: File.new(""),
     price: rand(1..100)
   )
 end

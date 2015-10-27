@@ -7,7 +7,7 @@
         <div class="caption">
         
           <p>Product Title<%= product.title %></p>
-          <p>Price<%= product.price %></p>
+          <p>Price <%= number_to_currency(product.price)  %></p>
           <p>Quantity <%= product.quantity %></p>
 
 <br/>

@@ -1,5 +1,49 @@
+
+
 nav.navbar.navbar-default {
   width: 100%;
   margin-top: 0;
   height: 80px;
+  background-color: #C1EAC1;
+  
+
+
+}
+
+.ghost-button {
+  color: #009688;
+  background: white;
+  opacity: 0.5;
+  border: 1px solid #009688;
+  font-size: 17px;
+  padding: 7px 12px;
+  font-weight: normal;
+  margin: 6px 0;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 120px;
+}
+
+.ghost-button:hover { 
+    background-color: white;
+    opacity:0.5;
+}
+
+.navbuttons {
+  display: inline;
+
+}
+
+.logoutbutton {
+  margin: 10px;
+}
+
+.loginbutton {
+  margin: 10px;
+}
+
+.cartbutton {
+  margin: 10px;
 }

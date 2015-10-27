@@ -6,15 +6,20 @@
       <h1>Super store</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.
       </p>
-      <p><%= button_to "See all products", products_path, method: :get, class: "btn btn-default text-center" %>
+      <p><%= button_to "See all products", products_path, method: :get, class: "ghost-button btn btn-default text-center" %>
       </p>
     </header>
     <hr>
+    <div class="row">
+        <div class="col-lg-12">
+            
+        </div>
+    </div>
 
     <!-- Title -->
     <div class="row">
         <div class="col-lg-12">
-            <h3>Featured Products</h3>
+            <h3>New Arrivals</h3>
         </div>
     </div>
     <!-- /.row -->
@@ -35,7 +40,7 @@
                     <p><%= product.description %></p>
                     <p>
                     
-                    <%= button_to "see product detail", product_path(product.id), method: :get, class: "btn btn-default text-center" %>
+                    <%= button_to "see product detail", product_path(product.id), method: :get, class: "ghost-button btn btn-default text-center" %>
                              <%= button_to [:add_to_cart, product] do %>
                              add to cart
                              <% end %>
