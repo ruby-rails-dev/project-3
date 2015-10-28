@@ -1,22 +1,38 @@
-User stories
+<h1>User stories</h1>
 
-A user can ...
+<h2>A user can ...</h2>
 
-create an account and log in.
+create an account, log in and log out.
 see a homepage with featured products.
 browse all products
+add a product to a cart
+in cart user can: add products, delete products
 
-Stretch goals, a user can ...
+ 
+
+
+
+<h2>Stretch goals, a user can ...</h2>
 browse all products by category
+change quantity
+make payments
+be an admin user
 
 
-Models
-User
-Product
-Order
-Order_Product (a join table)
+<h2>##Models and their Relationships###</h2>
+Order model: belongs to user; has many OrderProductUsers, has many products through order_product_users
+
+Order_Product_User model (a three-way join table): belongs to order, product and user. 
+
+Product model: has many order_product_users, has many orders through order_product_users
+
+User model: has many orders_product_users, has many orders through orders_product_users. has many products through orders_product_users.
 
 
-Wire frames described
 
-Navbar has login and signup buttons, as well as a button to the cart and to logout depending if the user is logged in. Anyone can browse products, but only current_user will have a cart. The current user can add items to his or her cart and proceed to purchase via stripe's payments gem.  
+
+
+
+<h2>Wire frames described</h2>
+
+Navbar has login and signup buttons, as well as a button to the cart and to logout depending if the user is logged in. Anyone can browse products, but only current_user will have a cart. The current user can add items to his or her cart and proceed to purchase via a third party vendor.  
