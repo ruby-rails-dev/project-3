@@ -1,28 +1,38 @@
-== README
+User stories
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A user can ...
 
-Things you may want to cover:
+create an account, login and logout.
+see a homepage with featured products.
+browse all products
+add a product to a cart
+in cart user can: add products, delete products
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+Stretch goals, a user can ...
+browse all products by category
+change quantity
+make payments
+be an admin user
+
+
+##Models and their Relationships###
+Order model: belongs to user; has many OrderProductUsers, has many products through order_product_users
+
+Order_Product_User model (a three-way join table): belongs to order, product and user. 
+
+Product model: has many order_product_users, has many orders through order_product_users
+
+User model: has many orders_product_users, has many orders through orders_product_users. has many products through orders_product_users.
+
+
+
+
+
+
+Wire frames described
+
+Navbar has login and signup buttons, as well as a button to the cart and to logout depending if the user is logged in. Anyone can browse products, but only current_user will have a cart. The current user can add items to his or her cart and proceed to purchase via a third party vendor.  
