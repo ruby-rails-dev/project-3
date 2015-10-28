@@ -2,7 +2,7 @@ User stories
 
 A user can ...
 
-create an account, log in and log out.
+create an account, login and logout.
 see a homepage with featured products.
 browse all products
 add a product to a cart
