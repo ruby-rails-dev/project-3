@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.order(:title).page(params[:page]).all
-   
   end
 
   def new
@@ -12,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(product_params)
      if @product.save
-        flash[:success] = "Welcome!"
+        flash[:success] = "Success!"
         redirect_to products_path
       else
         flash[:danger] = "Something went wrong..."
@@ -21,20 +20,17 @@ class ProductsController < ApplicationController
   
   end
 
-  def add_to_cart
-    user = current_user
-    product = Product.find(params[:id])
-    user.products.push(product)
-    user.save
   
-    redirect_to orders_path
+  def destroy
+    id = params[:id]
+    product = Product.find(id)
+    product.delete
+    redirect_to "/orders"
   end
-
 
   def show
    @product = Product.find(params[:id])
   end
-
 
 
   private 

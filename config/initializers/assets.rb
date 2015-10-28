@@ -12,3 +12,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( users.css )
 Rails.application.config.assets.precompile += %w(products_show.css)
 Rails.application.config.assets.precompile += %w( _navbar.css )
+Rails.application.config.assets.precompile += %w( _footer.css )
+Rails.application.config.assets.precompile += %w( orders_index.css )

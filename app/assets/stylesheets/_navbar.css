@@ -4,11 +4,12 @@ nav.navbar.navbar-default {
   width: 100%;
   margin-top: 0;
   height: 80px;
-  background-color: #C1EAC1;
-  
-
-
+  background-color:;
+  font-family: 'Sirin Stencil', cursive;
+  width: 100%;
 }
+
+
 
 .ghost-button {
   color: #009688;

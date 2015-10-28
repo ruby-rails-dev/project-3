@@ -1,7 +1,8 @@
 class Product < ActiveRecord::Base
-  has_many :orders, :through => :orders_products
-  has_many :orders_products
-  belongs_to :user
+  has_many :orders, :through => :order_product_users
+  has_many :order_product_users
+  # belongs_to :user
+  # belongs_to :order
 
 
 

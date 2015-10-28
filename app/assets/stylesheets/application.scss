@@ -15,15 +15,22 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Sirin+Stencil);
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  margin: 0px;
-  padding: 0px;
-  background-color: #E5E5E5; 
+
+  width: 100%;
+  background-color: #ffa667;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -37,10 +44,22 @@ body {
 
 .jumbotron {
   background-color: #C1EAC1;
+  background: url("https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400");
+  padding: 8.5em 8.6em;
+  background-size: cover;
+  overflow: hidden;
+  margin: 0;
+}
+
+.maintext {
+  font-family: 'Sirin Stencil', cursive;
+}
+.newArrivals{
+  font-family: 'Sirin Stencil', cursive;
 }
 
 .ghost-button {
-  color: #009688;
+  color: #00a243;
   background: white;
   opacity: 0.5;
   border: 1px solid #009688;

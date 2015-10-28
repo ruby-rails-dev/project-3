@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     user_params = params.require(:user).permit(:email, :password)
-    binding.pry
+
     @user = User.confirm(user_params)
     if @user
       login(@user)

@@ -1,11 +1,12 @@
 <%= stylesheet_link_tag "_navbar" %>
-<div class="container-fluid">
-  <nav class="navbar navbar-default">
-  <div class="row">
-    <div class="col-md-12">
+
+  <nav class="navbar navbar-default span6">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <%= link_to "Project3", "/", :"data-no-turbolink" => true, class: "navbar-brand" %>  
+      <%= link_to "Super Store", "/", :"data-no-turbolink" => true, class: "navbar-brand" %>  
     </div>
     <!-- @user.present? -->
     <% if current_user %>

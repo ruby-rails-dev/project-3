@@ -3,8 +3,8 @@
 
     <!-- Jumbotron Header -->
     <header class="jumbotron hero-spacer">
-      <h1>Super store</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.
+      <h1 class="maintext">Super store</h1>
+      <p>Super store is known for its amazing products. They are really super. Please spend money now.
       </p>
       <p><%= button_to "See all products", products_path, method: :get, class: "ghost-button btn btn-default text-center" %>
       </p>
@@ -19,7 +19,7 @@
     <!-- Title -->
     <div class="row">
         <div class="col-lg-12">
-            <h3>New Arrivals</h3>
+            <h3 class="newArrivals">New Arrivals</h3>
         </div>
     </div>
     <!-- /.row -->
@@ -35,15 +35,9 @@
                 <%= image_tag product.image.url(:medium) %>
                 <div class="caption">
                   <h3><%= product.title %></h3>
-              
-                    <p>
-                    <p><%= product.description %></p>
-                    <p>
-                    
+                  
                     <%= button_to "see product detail", product_path(product.id), method: :get, class: "ghost-button btn btn-default text-center" %>
-                             <%= button_to [:add_to_cart, product] do %>
-                             add to cart
-                             <% end %>
+                             <%= button_to "add to cart", order_product_users_path(product.id), :method => "post" %>
                     </p>
                 </div>
             </div>

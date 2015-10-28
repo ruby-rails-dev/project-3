@@ -1,4 +1,38 @@
-<%= @current_user %>
+<header class="header-image">
+        <div class="headline">
+            <div class="container">
+                <h1>Welcome, <%= @user.first_name %></h1>
+                <h2>Hope you enjoy shopping at the Super Store</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <hr class="featurette-divider">
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://cdimedia.com/wp-content/uploads/2014/10/happy-online-shopper.jpg">
+            <h2 class="featurette-heading">Super Store is amazing
+                <span class="text-muted">Our products are great</span>
+            </h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Second Featurette -->
+        <div class="featurette" id="contact">
+            <img class="featurette-image img-circle img-responsive pull-right" src="http://getmyusmail.com/wp-content/uploads/2014/10/concierge-service.jpg">
+            <h2 class="featurette-heading"> <%= @user.first_name %>, 
+                <span class="text-muted">Give us your money now.</span>
+            </h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div><p><%= button_to "See all products", products_path, method: :get, class: "ghost-button btn btn-default text-center" %>
+      </p>
+
+        <hr class="featurette-divider">
 
 
-HIIII

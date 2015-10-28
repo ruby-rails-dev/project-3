@@ -1,26 +1,31 @@
+<%= stylesheet_link_tag "orders_index" %>
 <h1>Your Cart</h1>
-<ul>
-  <% @products.each do |product| %>
-   <li class="span3">
+  <ul>
+    <% @products.each do |product| %>
+    <li class="span3">
       <div class="thumbnail">
-        
         <div class="caption">
-        
-          <p>Product Title<%= product.title %></p>
-          <p>Price <%= number_to_currency(product.price)  %></p>
-          <p>Quantity <%= product.quantity %></p>
+          <p><strong>Product Title</strong> <%= product.title %></p>
+          <p><strong>Price</strong> <%= number_to_currency(product.price)  %></p>
+          <p><strong>Quantity</strong> <%= product.quantity %></p>
+          <!-- FIXME: hardcoded order & product id as 1 -->
+          <!-- TODO: use the evenutal model method "@current_user.shopping_cart" to grab the current order id for the delete request -->
+          <%= button_to "delete", order_product_user_path(product), :method => :delete %>
+          <br/>
+          
+        </div>
 
-<br/>
-</div>
-</div>
-</li>
+      </div>
+    </li>
+  </ul>
+
 <% end %>
-
+<h2><strong>Total:</strong> </h2>
+<a class="btn btn-success" href="#">Checkout</a>
 <%= link_to "Back to main page", root_path %>
           
-          <a class="btn btn-success" href="#">Remove from cart</a>
         </div>
       </div>
     </li>
   </ul>
-  <a class="btn btn-success" href="#">Checkout</a>
+  

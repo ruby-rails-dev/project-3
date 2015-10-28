@@ -1,5 +1,5 @@
 require 'ffaker'
-
+puts Dir.pwd
 
 10.times do
   User.create(
@@ -8,15 +8,16 @@ require 'ffaker'
     email: Faker::Internet.email,
     password: "password"
     )
-
-10.times do
-  Product.create(
-    description: Faker::Product.product_name,
-    title: Faker::Product.product,
-    image: File.new(""),
-    price: rand(1..100)
-  )
 end
+
+30.times do
+  Product.create(
+    description: Faker::Product.product,
+    title: Faker::Product.product_name,
+    image: File.new("./public/images/image2.jpg"),
+    price: rand(1..300),
+    quantity: rand(1..10)
+  )
 
 end
 
