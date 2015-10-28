@@ -1,6 +1,6 @@
-<h1>User stories</h1>
+User stories
 
-<h2>A user can ...</h2>
+A user can ...
 
 create an account, log in and log out.
 see a homepage with featured products.
@@ -12,14 +12,14 @@ in cart user can: add products, delete products
 
 
 
-<h2>Stretch goals, a user can ...</h2>
+Stretch goals, a user can ...
 browse all products by category
 change quantity
 make payments
 be an admin user
 
 
-<h2>##Models and their Relationships###</h2>
+##Models and their Relationships###
 Order model: belongs to user; has many OrderProductUsers, has many products through order_product_users
 
 Order_Product_User model (a three-way join table): belongs to order, product and user. 
@@ -33,6 +33,6 @@ User model: has many orders_product_users, has many orders through orders_produc
 
 
 
-<h2>Wire frames described</h2>
+Wire frames described
 
 Navbar has login and signup buttons, as well as a button to the cart and to logout depending if the user is logged in. Anyone can browse products, but only current_user will have a cart. The current user can add items to his or her cart and proceed to purchase via a third party vendor.  
