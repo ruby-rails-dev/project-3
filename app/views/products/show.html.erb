@@ -13,7 +13,7 @@
                     
                      
                     <div class="text-right">
-                     <%= button_to "Cart", orders_path, method: "get", class: "cartbutton ghost-button btn btn-default" %>
+                     <%= button_to "add to cart", order_product_users_path(@product.id), :method => "post" %> </p>
                     </div>
 
                     </div>

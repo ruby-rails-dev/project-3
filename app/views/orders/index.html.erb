@@ -11,15 +11,17 @@
           <br/>
           
         </div>
-
+        
       </div>
     </li>
   </ul>
 
 <% end %>
- 
+<div class="pull-right">
+   <h2><strong>Total: <%= number_to_currency(@total) %></strong></h2>
   <a class="btn btn-success" href="#">Checkout</a>
   <%= link_to "Back to main page", root_path %>
+</div>
 
           
         </div>
