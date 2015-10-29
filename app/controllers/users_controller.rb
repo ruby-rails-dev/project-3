@@ -9,16 +9,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    #TODO: create a blank associated order for the user, aka their shopping cart
     user_params = params.require(:user).permit(:first_name, :last_name, :email, :password_digest )
     p "CREATING A USER #{user_params}"
     @user = User.create(user_params)
     login(@user) # <-- login the user
-    redirect_to "/users" 
+    redirect_to "/users/#{@user.id}" 
    end
 
     def show
-      
       id = params[:id]
       @user = User.find(id)
       @current_user = current_user
