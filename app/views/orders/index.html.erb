@@ -1,8 +1,8 @@
 <%= stylesheet_link_tag "orders_index" %>
-<h1>Your Cart</h1>
+<h1 class="ordersh1 text-muted">Your Cart</h1>
   <ul>
     <% @products.each do |product| %>
-    <li class="span3">
+    <li class="span3 align-center">
       <div class="thumbnail">
         <div class="caption">
           <p><strong>Product Title</strong> <%= product.title %></p>
@@ -17,7 +17,7 @@
   </ul>
 
 <% end %>
-<div class="pull-right">
+<div class="total">
    <h2><strong>Total: <%= number_to_currency(@total) %></strong></h2>
   <a class="btn btn-success" href="#">Checkout</a>
   <%= link_to "Back to main page", root_path %>

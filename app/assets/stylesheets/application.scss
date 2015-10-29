@@ -25,17 +25,26 @@ html, body {
 body {
 
   width: 100%;
-  background-color: #ffa667;
+  /*background-color: #ffa667; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
+  background-image:
+    linear-gradient(
+      #ffa667, #f38a37);
 
 }
 
+
 .background-splash {
   width: 100%;
+}
+
+div.row{
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .hero-spacer {
@@ -43,7 +52,9 @@ body {
 }
 
 .hero-feature {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    
+    margin-top: -12px;
 }
 
 .jumbotron {
@@ -57,11 +68,10 @@ body {
 }
 
 
-
 header {
   margin-top: 0px;
   padding-top: 0px;
-  border:2px solid red;
+ 
 }
 
 .maintext {
@@ -69,11 +79,17 @@ header {
 }
 .newArrivals{
   font-family: 'Sirin Stencil', cursive;
+  text-align: center;
+  font-size: 36px;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
 
 .thumbnail {
-  width: 75%;
-  
+  width: 70%;
+  padding:0;
+  display: inline-block;
+  margin-top: 10px
   
 }
 

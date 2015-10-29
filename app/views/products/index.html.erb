@@ -14,7 +14,7 @@
           <%= image_tag product.image.url(:thumb) %>
             <div class="caption">
               <h3><%= product.title %></h3>
-                <p><%= product.description %></p>
+              
                   <p><%= button_to "see product detail", product_path(product), method: :get, class: "btn btn-default text-center" %>
                     <%= button_to "add to cart", order_product_users_path(product.id), :method => "post" %> </p>
               </div>

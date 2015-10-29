@@ -4,7 +4,7 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron">
       <h1 class="maintext">Super store</h1>
-      <p>Super store is known for its amazing products. They are really super. Please spend money now.
+      <p>Super store is known for its amazing products. They are really super. 
       </p>
       <p><%= button_to "See all products", products_path, method: :get, class: "ghost-button btn btn-default text-center" %>
       </p>
@@ -35,7 +35,7 @@
                   <h3><%= product.title %></h3>
                   
                     <%= button_to "see product detail", product_path(product.id), method: :get, class: "ghost-button btn btn-default text-center" %>
-                             <%= button_to "add to cart", order_product_users_path(product.id), :method => "post" %>
+                             <%= button_to "add to cart", order_product_users_path(product.id), :method => "post", class: "ghost-button" %>
                     </p>
                 </div>
             </div>
