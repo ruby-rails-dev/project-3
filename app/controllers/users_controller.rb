@@ -9,11 +9,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user_params = params.require(:user).permit(:first_name, :last_name, :email, :password_digest )
+    
     p "CREATING A USER #{user_params}"
     @user = User.create(user_params)
+    @user.save!
     login(@user) # <-- login the user
-    redirect_to "/users/#{@user.id}" 
+    redirect_to user_path(@user)
    end
 
     def show
@@ -38,5 +39,9 @@ class UsersController < ApplicationController
       user.update_attributes(updated_attributes)
       #redirect to show
       redirect_to "/users"  # <-- go to show
+    end
+    private 
+    def user_params
+      user_params = params.require(:user).permit(:first_name, :last_name, :email, :password)
     end
 end

@@ -1,13 +1,12 @@
 
 
 nav.navbar.navbar-default {
-  width: 100%;
+  margin-right:0;
+  margin-left:0;
   margin-top: 0;
   height: 80px;
   font-family: 'Sirin Stencil', cursive;
-  width: 100%;
 }
-
 
 
 .ghost-button {

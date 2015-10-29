@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
     @user.try(:authenticate, params[:password])
   end
 
-  #TODO: create a instance method aka "def shopping_cart" so that a user can access their shopping cart
+  
   def shopping_cart
     @current_user.shopping_cart
   end
