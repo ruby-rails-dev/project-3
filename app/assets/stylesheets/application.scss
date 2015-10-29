@@ -48,11 +48,20 @@ body {
 
 .jumbotron {
   background-color: #C1EAC1;
-  background: url("https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400");
+  background: url("https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400https://images.unsplash.com/photo-1444090542259-0af8fa96557e?fit=crop&fm=jpg&h=600&q=80&w=1400")no-repeat center center fixed;
   padding: 8.5em 8.6em;
   background-size: cover;
   overflow: hidden;
   margin: 0;
+  margin-top: 0px;
+}
+
+
+
+header {
+  margin-top: 0px;
+  padding-top: 0px;
+  border:2px solid red;
 }
 
 .maintext {
@@ -60,6 +69,12 @@ body {
 }
 .newArrivals{
   font-family: 'Sirin Stencil', cursive;
+}
+
+.thumbnail {
+  width: 75%;
+  
+  
 }
 
 .ghost-button {

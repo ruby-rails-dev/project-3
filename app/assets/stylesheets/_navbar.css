@@ -5,13 +5,18 @@ nav.navbar.navbar-default {
   margin-left:0;
   margin-top: 0;
   height: 80px;
+  background-color: #E5F2E5;
   font-family: 'Sirin Stencil', cursive;
+ 
 }
-
+.navbar-brand {
+  font-size: 30px;
+  margin-top: 15%;
+}
 
 .ghost-button {
   color: #009688;
-  background: white;
+  background: #E5F2E5;
   opacity: 0.5;
   border: 1px solid #009688;
   font-size: 17px;
