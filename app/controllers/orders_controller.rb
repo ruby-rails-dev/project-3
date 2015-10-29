@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
       #a will return a number
       product = Product.find(a)
       @products.push(product)
+      # binding.pry
     end
   end
 

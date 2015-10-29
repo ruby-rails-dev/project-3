@@ -10,12 +10,8 @@ class OrderProductUsersController < ApplicationController
     cart = OrderProductUser.new
     cart.user = current_user
     cart.product = product
-    # add this product to your orders_product join table with product id and order id
-    # also add user_id 
-    # save your orders_product object
     cart.save!
-    puts "\n\n\n"+cart.inspect
-    redirect_to orders_path
+    redirect_to orders_path             
   end
   
   def destroy

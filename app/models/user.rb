@@ -3,7 +3,6 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness:true
   
 
-  # has_many :orders
   has_many :order_product_users
   has_many :orders, through: :orders_product_users 
   has_many :products, through: :order_product_users

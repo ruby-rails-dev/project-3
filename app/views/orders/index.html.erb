@@ -7,9 +7,6 @@
         <div class="caption">
           <p><strong>Product Title</strong> <%= product.title %></p>
           <p><strong>Price</strong> <%= number_to_currency(product.price)  %></p>
-          <p><strong>Quantity</strong> <%= product.quantity %></p>
-          <!-- FIXME: hardcoded order & product id as 1 -->
-          <!-- TODO: use the evenutal model method "@current_user.shopping_cart" to grab the current order id for the delete request -->
           <%= button_to "delete", order_product_user_path(product), :method => :delete %>
           <br/>
           
@@ -20,9 +17,10 @@
   </ul>
 
 <% end %>
-<h2><strong>Total:</strong> </h2>
-<a class="btn btn-success" href="#">Checkout</a>
-<%= link_to "Back to main page", root_path %>
+ 
+  <a class="btn btn-success" href="#">Checkout</a>
+  <%= link_to "Back to main page", root_path %>
+
           
         </div>
       </div>
